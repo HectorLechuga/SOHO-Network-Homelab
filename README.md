@@ -25,14 +25,14 @@ Goals for this project:
 
 - The router is given a static IP of 192.168.10.1 and the switch is given a static IP of 192.168.10.2
 * Lower IP ranges are resvered for network devices for future upgrades
-## Router Port Configuration
+### Router Port Configuration
 <img width="1023" height="333" alt="Router Port Configuration" src="https://github.com/user-attachments/assets/5bc338ba-2196-485d-b4d3-29768dd69030" />
 
 - Port 1 is configured as the WAN interface 
 - Port 2 is a trunk port connecting to the Switch and carries VLANs 10,20, and 30 as 802.1Q tagged traffic. 
 - Ports 3-4 are also configured as trunk ports to support future VLAN supported devices. 
 - Port 5 is an access port assigned to port 10 and will be used for my admin PC, allowing untagged traffic.
-## Switch Port Configuration
+### Switch Port Configuration
 <img width="525" height="683" alt="Switch Port Configuration" src="https://github.com/user-attachments/assets/3ed8b213-d7ba-491f-b9ff-a6f035412722" />
 
 ## Firewall Rules & Traffic Flow
