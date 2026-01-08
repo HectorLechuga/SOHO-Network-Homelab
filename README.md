@@ -14,7 +14,7 @@ Goals for this project:
 - Wireless AP: TP-Link AX1800
 
 ## Network Topology
-![Network Topology](https://github.com/user-attachments/assets/58faf59c-b8bc-4f55-b7ca-8a12d64ad013)
+![Network Topology](https://github.com/user-attachments/assets/dc842a8a-8de3-42f4-959f-0340838ed508)
 
 ### VLAN Configuration
 | VLAN | Subnet | DHCP | Notes |
@@ -35,6 +35,26 @@ Goals for this project:
 ### Switch Port Configuration
 <img width="525" height="683" alt="Switch Port Configuration" src="https://github.com/user-attachments/assets/3ed8b213-d7ba-491f-b9ff-a6f035412722" />
 
+The managed switch is configured to support VLAN segmentation using 802.1Q. 802.1Q allows multiple VLANs to be carried over a single link.
+### Trunk Port
+- Port 1 - Uplink to Router
+  - Connected to ER605 LAN Port 2
+  - VLANs 10 (Mgmt), 20 (LAN), and 30 (IoT) are tagged
+### Access Ports
+- Port 2 - Access (VLAN 10 Mgmt)
+  - Admin Laptop 192.168.10.5
+  - Untagged access for admin tasks
+- Port 3 - Access (VLAN 20 LAN)
+  - Network Printer 192.168.20.50
+- Port 4 - Access (VLAN 20 LAN)
+  - Office PC 192.168.20.51
+- Port 5 - Access (VLAN 20 LAN)
+  - PC 2 192.168.20.52
+- Port 6 - Access (VLAN 20 LAN)
+  - AX1800 Acess Point 192.168.20.2
+- Port 7 - Access (VLAN 30 IoT)
+  - EUFY Server 192.168.30.2
+  - Isolated from other VLANs for security
 ## Firewall Rules & Traffic Flow
 <img width="1245" height="476" alt="Firewall Configuration" src="https://github.com/user-attachments/assets/436e09b2-7fc5-4171-bc15-9d06383d7f68" />
 
